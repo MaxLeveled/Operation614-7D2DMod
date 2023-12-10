@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
     <Name value="Ezeds" />
-    <DisplayName value="MaxLeveled Elite Zombies" />
+    <DisplayName value="Operation 61:4" />
     <Version value="1.0" />
-    <Description value="Adds in Elite Zombies with unique loot, custom mods, and other MMMORPG elements" />
+    <Description value="Adds in Elite Zombies, Recipes, Armors, and Weapons and Tools." />
     <Author value="MaxLeveled" />
-    <Website value="https://youtube.com/@MaxLeveled" />
+    <Website value="https://github.com/MaxLeveled/Operation614-7D2DMod/" />
 </xml>
