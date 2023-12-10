@@ -64,26 +64,26 @@
 </recipe>
 
 <!-- Gun Mod Recipes -->
-<recipe name="modT1GunBuffer" count="1" craft_area="workbench" craft_time="500" tags="workbenchCrafting">
+<recipe name="mod614GunBufferT1" count="1" craft_area="workbench" craft_time="500" tags="workbenchCrafting">
 	<ingredient name="resourceEliteGunParts" count="75"/>
 	<ingredient name="resourceScrapPolymers" count="50"/>
 	<ingredient name="resourceLeather" count="50"/>
 	<ingredient name="resourceMechanicalParts" count="75"/>
 	<ingredient name="resourceMilitaryFiber" count="75"/>
 </recipe>
-<recipe name="modT2GunBuffer" count="1" craft_area="workbench" craft_time="1000" tags="workbenchCrafting">
+<recipe name="mod614GunBufferT2" count="1" craft_area="workbench" craft_time="1000" tags="workbenchCrafting">
 	<ingredient name="resourceEliteGunParts" count="100"/>
 	<ingredient name="resourceForgedIron" count="60"/>
 	<ingredient name="resourceScrapPolymers" count="100"/>
 	<ingredient name="resourceMechanicalParts" count="100"/>
 </recipe>
-<recipe name="modT3GunBuffer" count="1" craft_area="workbench" craft_time="1500" tags="workbenchCrafting">
+<recipe name="mod614GunBufferT3" count="1" craft_area="workbench" craft_time="1500" tags="workbenchCrafting">
 	<ingredient name="resourceEliteGunParts" count="125"/>
 	<ingredient name="resourceForgedSteel" count="70"/>
 	<ingredient name="armorSteelSetParts" count="25"/>
 	<ingredient name="resourceMechanicalParts" count="125"/>
 </recipe>
-<recipe name="modT4GunBuffer" count="1" craft_area="workbench" craft_time="2000" tags="workbenchCrafting">
+<recipe name="mod614GunBufferT4" count="1" craft_area="workbench" craft_time="2000" tags="workbenchCrafting">
 	<ingredient name="resourceEliteGunParts" count="250"/>
 	<ingredient name="resourceBulletCasing" count="2500"/>
 	<ingredient name="resourceGunPowder" count="5000"/>

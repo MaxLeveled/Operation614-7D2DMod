@@ -1,7 +1,21 @@
 <configs>
 	<append xpath="/item_modifiers">
-	<item_modifier name="modEliteKiller" installable_tags="weapon" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
-		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+	
+	<item_modifiers>
+	<item_modifier name="614modtemplate" type="attachment">
+		<property name="CreativeMode" value="None"/>
+		<property name="CustomIcon" value="missingIcon"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+		<property name="Group" value="Mods,Tool/Weapon Mods"/>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	<!-- The 614modtemplate is what we base all mods off of to combat compatibility  issues. -->
+	
+	<item_modifier name="mod614EliteKiller" installable_tags="weapon" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="614modtemplate" param1="CustomIcon"/>
 		<property name="CustomIcon" value="pipeSmallWallValve02"/>
 		<property name="EconomicValue" value="85000"/>
 		<property name="TraderStageTemplate" value="modsTier3"/>
@@ -10,8 +24,8 @@
 			<passive_effect name="DamageModifier" operation="perc_add" value="2.5" tags="elite"/>
 		</effect_group>
 	</item_modifier>
-	<item_modifier name="modT1GunBuffer" installable_tags="gun" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
-		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+	<item_modifier name="mod614GunBufferT1" installable_tags="gun" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="614modtemplate" param1="CustomIcon"/>
 		<property name="CustomIcon" value="gunHandgunT1PistolParts"/>
 		<property name="EconomicValue" value="85000"/>
 		<property name="TraderStageTemplate" value="modsTier3"/>
@@ -20,8 +34,8 @@
 			<passive_effect name="DamageModifier" operation="perc_add" value=".25"/>
 		</effect_group>
 	</item_modifier>
-	<item_modifier name="modT2GunBuffer" installable_tags="gun" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
-		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+	<item_modifier name="mod614GunBufferT2" installable_tags="gun" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="614modtemplate" param1="CustomIcon"/>
 		<property name="CustomIcon" value="gunRifleT1HuntingRifleParts"/>
 		<property name="EconomicValue" value="85000"/>
 		<property name="TraderStageTemplate" value="modsTier3"/>
@@ -30,8 +44,8 @@
 			<passive_effect name="DamageModifier" operation="perc_add" value=".5"/>
 		</effect_group>
 	</item_modifier>
-	<item_modifier name="modT3GunBuffer" installable_tags="gun" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
-		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+	<item_modifier name="mod614GunBufferT3" installable_tags="gun" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="614modtemplate" param1="CustomIcon"/>
 		<property name="CustomIcon" value="gunMGT1AK47Parts"/>
 		<property name="EconomicValue" value="85000"/>
 		<property name="TraderStageTemplate" value="modsTier3"/>
@@ -40,8 +54,8 @@
 			<passive_effect name="DamageModifier" operation="perc_add" value=".75"/>
 		</effect_group>
 	</item_modifier>
-	<item_modifier name="modT4GunBuffer" installable_tags="gun" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
-		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+	<item_modifier name="mod614GunBufferT4" installable_tags="gun" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="614modtemplate" param1="CustomIcon"/>
 		<property name="CustomIcon" value="bundleMachineGun"/>
 		<property name="EconomicValue" value="85000"/>
 		<property name="TraderStageTemplate" value="modsTier3"/>

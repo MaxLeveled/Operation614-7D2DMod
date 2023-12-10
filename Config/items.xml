@@ -525,7 +525,7 @@
         <property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
 	</property>
 
-	<effect_group name="meleeToolAxeT3Chainsaw">
+	<effect_group name="EliteChainsaw">
 		<passive_effect name="RoundsPerMinute" operation="base_set" value="600" tags="perkMiner69r"/>
 		<passive_effect name="DegradationMax" operation="base_set" value="5000,25000" tier="1,6" tags="perkMiner69r"/>
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
@@ -540,7 +540,7 @@
 		<passive_effect name="EntityDamage" operation="base_set" value="80" tags="perkMiner69r"/>
 		<passive_effect name="EntityDamage" operation="perc_add" value="-.04,.04" tags="perkMiner69r"/> <!-- random EntityDmg -->
 		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
-		<passive_effect name="BlockDamage" operation="base_set" value="250" tags="perkMiner69r"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="50" tags="perkMiner69r"/>
 		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkMiner69r"/> <!-- random BlockDmg -->
 		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
 		<passive_effect name="PlayerExpGain" operation="perc_add" value="-.3" tags="Harvesting"/>
@@ -548,8 +548,11 @@
 		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMiner69r"/> --> <!-- random APM -->
 		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/>  --><!-- random MagazineSize -->
 		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkMiner69r"/> <!-- random WeaponHandling -->
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.85" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.85" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.85" tags="metal"/>
 		<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMiner69r"/>
-		<passive_effect name="MagazineSize" operation="base_set" value="300" tags="perkMiner69r"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="700" tags="perkMiner69r"/>
 		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkMiner69r"/> <!-- 3.5s -->
 
 		<passive_effect name="SpreadDegreesVertical" operation="base_set" value=".5" tags="perkMiner69r"/>

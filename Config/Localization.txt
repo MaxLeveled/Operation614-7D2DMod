@@ -3,7 +3,7 @@ Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german
 modEliteKiller,item_modifiers,mod,,,Elite Killer
 modEliteKillerDesc,item_modifiers,mod,,,Increase weapon damage dealt to Elites by 250%.
 EliteWight,entityclasses,Entity,,,Elite Wight
-resourceEliteCore,items,items,Item,,,Elite Armor Plate
+resourceEliteCore,items,Item,,,Elite Armor Cores
 resourceEliteBladeParts,items,Item,,,Elite Blade Parts
 resourceEliteGunParts,items,Item,,,Elite Gun Parts
 resourceEliteCoreDesc,items,Item,,,Elite grade synthetic materials used to craft extremely powerful armor.

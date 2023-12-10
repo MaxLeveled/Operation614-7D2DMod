@@ -5,7 +5,7 @@
 	<item name="resourceEliteCore" count="2" prob="0.65"/>
 	<item name="resourceEliteBladeParts" count="1" prob="0.65"/>
 	<item name="resourceEliteGunParts" count="1" prob="0.65"/>
-	<item name="modEliteKiller" count="1" prob="0.0050"/>
+	<item name="mod614EliteKiller" count="1" prob="0.0050"/>
 </lootcontainer>
 <lootcontainer id="998" name="EliteHazmatLoot" count="4" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1">
 	<item name="resourceEliteCore" count="2" prob="0.65"/>
@@ -21,10 +21,10 @@
 	<item name="armorMilitarySetParts" count="1" prob="0.65"/>
 	<item name="resourceEliteCore" count="2" prob="0.65"/>
 	<item name="resourceEliteBladeParts" count="1" prob="0.65"/>
-	<item name="modT1GunBuffer" count="1" prob="0.01"/>
-	<item name="modT2GunBuffer" count="1" prob="0.01"/>
-	<item name="modT3GunBuffer" count="1" prob="0.01"/>
-	<item name="modT4GunBuffer" count="1" prob="0.01"/>
+	<item name="mod614GunBufferT1" count="1" prob="0.01"/>
+	<item name="mod614GunBufferT2" count="1" prob="0.01"/>
+	<item name="mod614GunBufferT3" count="1" prob="0.01"/>
+	<item name="mod614GunBufferT4" count="1" prob="0.01"/>
 	<item name="apparelNightvisionGoggles" count="1" prob="0.0010"/>
 		<item name="armorEliteMilitaryGhillieHood" count="1" prob="0.0010"/>
 			<item name="armorEliteMilitaryGhillieSuit" count="1" prob="0.0010"/>
