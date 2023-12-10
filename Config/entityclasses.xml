@@ -1,0 +1,314 @@
+<configs>
+
+	<append xpath="/entity_classes">
+<!-- CUSTOM LOOT -->
+	<!-- ELITE WIGHT LOOT -->
+<entity_class name="Elite Wight Loot">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>
+	<property name="ModelType" value="Custom"/>
+	<property name="Prefab" value="Backpack"/>
+	<property name="Class" value="EntityLootContainer"/>
+	<property name="Parent" value="Backpack"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="TimeStayAfterDeath" value="1200"/>
+	<property name="LootListOnDeath" value="EliteWightLoot"/>
+	<property name="Faction" value="none"/>
+</entity_class>
+	<!-- ELITE HAZMAT LOOT -->
+<entity_class name="Elite Hazmat Loot">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>
+	<property name="ModelType" value="Custom"/>
+	<property name="Prefab" value="Backpack"/>
+	<property name="Class" value="EntityLootContainer"/>
+	<property name="Parent" value="Backpack"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="TimeStayAfterDeath" value="1200"/>
+	<property name="LootListOnDeath" value="EliteHazmatLoot"/>
+	<property name="Faction" value="none"/>
+</entity_class>
+<entity_class name="Elite SWAT Loot">
+	<property name="HideInSpawnMenu" value="true"/>
+	<property name="Mesh" value="@:Entities/LootContainers/zpackPrefab.prefab"/>
+	<property name="ModelType" value="Custom"/>
+	<property name="Prefab" value="Backpack"/>
+	<property name="Class" value="EntityLootContainer"/>
+	<property name="Parent" value="Backpack"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="TimeStayAfterDeath" value="1200"/>
+	<property name="LootListOnDeath" value="EliteSWATLoot"/>
+	<property name="Faction" value="none"/>
+</entity_class>
+<!-- CUSTOM ZOMBIES -->
+
+	<!-- ELITE HAZMAT -->
+<entity_class name="EliteHazmat" extends="zombieMaleHazmat">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,zombie,walker,feral,radiated, elite"/>
+	<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZHazmatRadiated.prefab"/>
+	<property name="WalkType" value="2"/>
+	<property name="AINoiseSeekDist" value="6"/>
+	<property name="AIPathCostScale" value=".65, .9"/>
+
+	<!-- Gameplay zombieMaleHazmatRadiated -->
+	<property name="MoveSpeedAggro" value=".7, 1.5"/>
+	<property name="JumpMaxDistance" value=".5, .6"/>
+	<property name="HandItem" value="meleeEliteWight"/>
+
+	<property name="DismemberMultiplierHead" value=".3"/>
+	<property name="DismemberMultiplierArms" value=".001"/>
+	<property name="DismemberMultiplierLegs" value=".001"/>
+  <!-- Radiated -->
+  <property name="PainResistPerHit" value=".9"/>
+  <!-- Radiated -->
+  <property name="ExperienceGain" value="5000"/>
+  <property name="Mass" value="1000"/>
+  <property name="Weight" value="850"/>
+	<property name="LootDropEntityClass" value="Elite Hazmat Loot"/>
+	<property name="LootDropProb" value="1"/>
+  <!-- XP grunt radiated -->
+
+  <effect_group name="Base Effects">
+    <passive_effect name="HealthMax" operation="base_set" value="1300"/>
+    <triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="22.5"/>
+    <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+  </effect_group>
+</entity_class>
+
+<!-- ELITE WIGHT -->
+
+<entity_class name="EliteWight" extends="zombieTemplateMale">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="SizeScale" value="1.2"/>
+	<property name="Tags" value="entity,zombie,walker,feral,elite"/>
+	<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZWightFeral.prefab"/>
+	<property name="SoundRandom" value="Enemies/Feral_Zombie/zombieferalroam"/>
+	<property name="SoundAlert" value="Enemies/Feral_Zombie/zombieferalalert"/>
+	<property name="SoundAttack" value="Enemies/Feral_Zombie/zombieferalattack"/>
+	<property name="SoundHurt" value="Enemies/Feral_Zombie/zombieferalpain"/>
+	<property name="SoundDeath" value="Enemies/Feral_Zombie/zombieferaldeath"/>
+	<property name="SoundSense" value="Enemies/Feral_Zombie/zombieferalsense"/>
+	<property name="SoundFootstepModifier" value="Enemies/Feral_Zombie/zombieferalfootstep"/>
+	<property name="WalkType" value="2"/>
+	<property name="ExperienceGain" value="20000"/>
+	<property name="Mass" value="1000"/>
+	<property name="Weight" value="850"/>
+	<property name="LootDropEntityClass" value="Elite Wight Loot"/>
+	<property name="LootDropProb" value="1"/>
+	<property name="DismemberMultiplierHead" value=".3"/>
+	<property name="DismemberMultiplierArms" value=".001"/>
+	<property name="DismemberMultiplierLegs" value=".001"/>
+	<property name="DismemberTag_L_HeadGore"
+			value="
+  			Wight/Blunt/Head;
+  			Wight/Blade/Head"
+  
+			data="
+				target=Neck+scale=0,0,0+atp=true+type=blunt+detach=true+atb=true;
+				target=Neck+scale=0,0,0+atp=true+type=blade+detach=true+atb=true
+				"/>
+
+	<property name="DismemberTag_L_LeftUpperLegGore"
+			value="
+				Wight/Blunt/LeftUpperLeg;
+				Wight/Blade/LeftUpperLeg"
+  
+			data="
+				target=LeftUpLeg+scale=1,0.5,1+type=blunt+detach=true;
+				target=LeftUpLeg+scale=1,0.5,1+type=blade+detach=true
+				"/>
+
+	<property name="DismemberTag_L_LeftLowerLegGore"
+			value="
+				Wight/Blunt/LeftLowerLeg;
+				Wight/Blade/LeftLowerLeg"
+  
+			data="
+				target=LeftLeg+scale=0,0,0+atp=true+type=blunt+detach=true;
+				target=LeftLeg+scale=0,0,0+atp=true+type=blade+detach=true
+				"/>
+
+	<property name="DismemberTag_L_RightUpperLegGore"
+  		value="
+				Wight/Blunt/RightUpperLeg;
+				Wight/Blade/RightUpperLeg"
+  
+			data="
+				target=RightUpLeg+scale=1,0.5,1+type=blunt+detach=true;
+				target=RightUpLeg+scale=1,0.5,1+type=blade+detach=true
+				"/>
+
+	<property name="DismemberTag_L_RightLowerLegGore"
+  		value="
+				Wight/Blunt/RightLowerLeg;
+				Wight/Blade/RightLowerLeg"
+  
+			data="
+				target=RightLeg+scale=0,0,0+atp=true+type=blunt+detach=true;
+				target=RightLeg+scale=0,0,0+atp=true+type=blade+detach=true
+				"/>
+
+	<property name="DismemberTag_L_LeftUpperArmGore"
+  		value="
+				Wight/Blunt/LeftUpperArm;
+				Wight/Blade/LeftUpperArm"
+  
+			data="
+				target=LeftArmRoll+scale=0,0.8,0.8+atp=true+type=blunt+detach=true;
+				target=LeftArmRoll+scale=0,0.8,0.8+atp=true+type=blade+detach=true
+				"/>
+
+	<property name="DismemberTag_L_LeftLowerArmGore"
+  		value="
+				Wight/Blunt/LeftLowerArm;
+				Wight/Blade/LeftLowerArm"
+  
+			data="
+				target=LeftForeArmRoll+scale=0,1,1+atp=true+type=blunt+detach=true;
+				target=LeftForeArmRoll+scale=0,1,1+atp=true+type=blade+detach=true
+				"/>
+
+	<property name="DismemberTag_L_RightUpperArmGore"
+  		value="
+			  Wight/Blunt/RightUpperArm;
+				Wight/Blade/RightUpperArm"
+  
+			data="
+				target=RightArmRoll+scale=0,0.8,0.8+atp=true+type=blunt+detach=true;
+				target=RightArmRoll+scale=0,0.8,0.8+atp=true+type=blade+detach=true
+				"/>
+
+	<property name="DismemberTag_L_RightLowerArmGore"
+  		value="
+				Wight/Blunt/RightLowerArm;
+				Wight/Blade/RightLowerArm"
+  
+			data="
+				target=RightForeArmRoll+scale=0,1,1+atp=true+type=blunt+detach=true;
+				target=RightForeArmRoll+scale=0,1,1+atp=true+type=blade+detach=true
+				"/>
+
+	<!-- Gameplay zombieWightFeral -->
+	<property name="PainResistPerHit" value=".9"/><!-- Feral -->
+	<property name="MoveSpeedAggro" value="0.55, 1.0"/> <!-- fit, feral -->
+	<property name="JumpMaxDistance" value="4.6, 5"/>
+	<property name="HandItem" value="meleeEliteWight"/>
+	<property name="ExperienceGain" value="12500"/><!-- XP grunt feral -->
+	<property name="LootDropProb" value="1"/> <!-- Feral -->
+
+	<effect_group name="Base Effects">
+		<!--<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>-->
+		<passive_effect name="HealthMax" operation="base_set" value="2500"/>
+		<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
+	</effect_group>
+</entity_class>
+
+<!-- ELITE SWAT COP -->
+
+<entity_class name="EliteSWAT" extends="zombieSoldier">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Class" value="EntityZombieCop"/>
+	<property name="Tags" value="entity,zombie,walker,boss,elite"/>
+	<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZDemolition.prefab"/>
+	<property name="Mass" value="1000"/>
+	<property name="Weight" value="850"/>
+	<property name="AINoiseSeekDist" value="6"/>
+	<property name="AIPathCostScale" value=".65, .9"/>
+	<!-- Gameplay zombieMaleHazmatRadiated -->
+	<property name="MoveSpeedAggro" value=".65, 1.5"/>
+	<property name="JumpMaxDistance" value=".55, .6"/>
+	<property name="HandItem" value="meleeEliteWight"/>
+
+  <property name="DismemberMultiplierHead" value=".3"/>
+  <property name="DismemberMultiplierArms" value=".001"/>
+  <property name="DismemberMultiplierLegs" value=".001"/>
+  <!-- Radiated -->
+  <property name="PainResistPerHit" value=".9"/>
+  <!-- Radiated -->
+  <property name="ExperienceGain" value="12500"/>
+  <property name="Mass" value="1000"/>
+  <property name="Weight" value="850"/>
+  <property name="LootDropEntityClass" value="Elite SWAT Loot"/>
+  <property name="LootDropProb" value="1"/>
+  <!-- XP grunt radiated -->
+  <effect_group name="Base Effects">
+    <passive_effect name="HealthMax" operation="base_set" value="1150"/>
+	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="zSWAT01"/>
+	<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="head"/>
+	<passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
+  </effect_group>
+</entity_class>
+	</append>
+	
+<insertAfter xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='DamageModifier'][@operation='perc_set'][@value='1'][1]">
+	<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="head,animal"/>
+	<passive_effect name="DamageModifier" operation="perc_set" value="0.1" tags="zombie"/>
+	</insertAfter>
+<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='DamageModifier'][@operation='perc_add'][@value='1'][@tags='head'][1]/@value">1.5</set>
+	<remove xpath="/entity_classes/entity_class[@name='zombieFatCop']"/>
+	<insertAfter xpath="/entity_classes/entity_class[@name='zombieFatHawaiianRadiated']">
+<entity_class name="zombieFatCop" extends="zombieTemplateMale">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Class" value="EntityZombieCop"/>
+	<property name="Tags" value="entity,zombie,walker,zombieCop"/>
+	<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZCop.prefab"/>
+	<property name="WalkType" value="1"/>
+	<property name="RightHandJointName" value="Jaw"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="Mass" value="320"/>
+	<property name="Weight" value="70"/>
+	<property name="PhysicsBody" value="zombieFat"/>
+	<property name="RootMotion" value="true"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="PushFactor" value="20"/>
+
+	<property name="AITask" value="
+	BreakBlock|
+	ApproachDistraction|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachSpot|
+	Look|
+	Wander|
+	"/>
+
+	<property name="SoundRandom" value="Enemies/Acid_Puking_Hulk/hulkroam"/>
+	<property name="SoundAlert" value="Enemies/Acid_Puking_Hulk/hulkalert"/>
+	<property name="SoundAttack" value="Enemies/Acid_Puking_Hulk/hulkattack"/>
+	<property name="SoundHurt" value="Enemies/Acid_Puking_Hulk/hulkpain"/>
+	<property name="SoundDeath" value="Enemies/Acid_Puking_Hulk/hulkdeath"/>
+	<property name="SoundSense" value="Enemies/Acid_Puking_Hulk/hulksense"/>
+	<property name="SoundFootstepModifier" value="Animals/Bear/bear_footstep"/>
+	<property name="SoundExplodeWarn" value="hulkexplodewarning"/>
+
+	<property name="DismemberMultiplierLegs" value="0"/>
+	<property name="LegCrawlerThreshold" value="0"/>
+	<property name="LegCrippleThreshold" value="0"/>
+	<property name="KnockdownProneDamageThreshold" value="0"/>
+	<property name="KnockdownKneelDamageThreshold" value="0"/>
+	<property name="LegsExplosionDamageMultiplier" value="2"/> <!-- volatile so vulnerable to land mines/explosives -->
+	<property name="ArmsExplosionDamageMultiplier" value="2"/>
+	<property name="HeadExplosionDamageMultiplier" value="2"/>
+	<property name="ChestExplosionDamageMultiplier" value="2"/>
+
+	<!-- Gameplay zombieFatCop -->
+	<property name="MoveSpeedAggro" value="0.2, 1.2"/>
+	<property name="JumpMaxDistance" value=".8, 1.1"/>
+	<property name="HandItem" value="meleeHandZombieCop"/>
+	<property name="ExperienceGain" value="750"/><!-- XP strong -->
+	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="375"/>
+		<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+	</effect_group>
+
+	<property name="Explosion.ParticleIndex" value="8"/>
+	<property name="Explosion.RadiusBlocks" value="5"/>
+	<property name="Explosion.RadiusEntities" value="6"/>
+	<property name="Explosion.BlockDamage" value="500"/>
+	<property name="Explosion.EntityDamage" value="150"/>
+	<property name="Explosion.DamageBonus.earth" value="0"/>
+</entity_class>
+	</insertAfter>
+</configs>
+

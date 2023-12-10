@@ -1,0 +1,54 @@
+<configs>
+	<append xpath="/item_modifiers">
+	<item_modifier name="modEliteKiller" installable_tags="weapon" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="CustomIcon" value="pipeSmallWallValve02"/>
+		<property name="EconomicValue" value="85000"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<!-- Increases damage against Elite enemies -->
+		<effect_group tiered="false">
+			<passive_effect name="DamageModifier" operation="perc_add" value="2.5" tags="elite"/>
+		</effect_group>
+	</item_modifier>
+	<item_modifier name="modT1GunBuffer" installable_tags="gun" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="CustomIcon" value="gunHandgunT1PistolParts"/>
+		<property name="EconomicValue" value="85000"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<!-- Increases damage against Elite enemies -->
+		<effect_group tiered="false">
+			<passive_effect name="DamageModifier" operation="perc_add" value=".25"/>
+		</effect_group>
+	</item_modifier>
+	<item_modifier name="modT2GunBuffer" installable_tags="gun" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="CustomIcon" value="gunRifleT1HuntingRifleParts"/>
+		<property name="EconomicValue" value="85000"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<!-- Increases damage against Elite enemies -->
+		<effect_group tiered="false">
+			<passive_effect name="DamageModifier" operation="perc_add" value=".5"/>
+		</effect_group>
+	</item_modifier>
+	<item_modifier name="modT3GunBuffer" installable_tags="gun" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="CustomIcon" value="gunMGT1AK47Parts"/>
+		<property name="EconomicValue" value="85000"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<!-- Increases damage against Elite enemies -->
+		<effect_group tiered="false">
+			<passive_effect name="DamageModifier" operation="perc_add" value=".75"/>
+		</effect_group>
+	</item_modifier>
+	<item_modifier name="modT4GunBuffer" installable_tags="gun" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="CustomIcon" value="bundleMachineGun"/>
+		<property name="EconomicValue" value="85000"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<!-- Increases damage against Elite enemies -->
+		<effect_group tiered="false">
+			<passive_effect name="DamageModifier" operation="perc_add" value="1.0"/>
+		</effect_group>
+	</item_modifier>
+	</append>
+</configs>

@@ -1,0 +1,568 @@
+<configs>
+<append xpath="/items">
+		<item name="meleeEliteWight">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Degradation" value="99999" param1="true"/>
+			<property class="Action0">
+				<property name="Range" value="2.5"/>
+				<property name="DamageEntity" value="85"/>
+				<property name="DamageBlock" value="1000"/></property>
+			<effect_group name="meleeEliteWight" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>	
+			</effect_group>
+		</item>
+		<item name="resourceEliteCore">
+			<property name="Extends" value="partsMaster" param1="CustomIcon"/>
+			<property name="Tags" value="parts,machinegunSkill"/>
+			<property name="CustomIcon" value="modRoboticDroneHeadlampMod"/>
+			<property name="DescriptionKey" value="resourceEliteCoreDesc"/>
+			<property name="Material" value="MMachineGunParts"/>
+			<property name="EconomicValue" value="5000"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1250"/>
+			<property name="Group" value="Resources"/>
+		</item>
+		<item name="resourceEliteBladeParts">
+			<property name="Extends" value="partsMaster" param1="CustomIcon"/>
+			<property name="Tags" value="parts,bladeSkill"/>
+			<property name="CustomIcon" value="modMeleeTemperedBlade"/>
+			<property name="DescriptionKey" value="resourceEliteCoreDesc"/>
+			<property name="Material" value="MMachineGunParts"/>
+			<property name="EconomicValue" value="5000"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1250"/>
+			<property name="Group" value="Resources"/>
+		</item>
+		<item name="resourceEliteGunParts">
+			<property name="Extends" value="partsMaster" param1="CustomIcon"/>
+			<property name="Tags" value="parts,machinegunSkill"/>
+			<property name="CustomIcon" value="modGunMeleeRadRemover"/>
+			<property name="DescriptionKey" value="resourceEliteCoreDesc"/>
+			<property name="Material" value="MMachineGunParts"/>
+			<property name="EconomicValue" value="5000"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1250"/>
+			<property name="Group" value="Resources"/>
+		</item>
+<!-- THE ELITE HAZMAT PLATE SET -->
+<item name="armorEliteHazmatMaster">
+	<property name="CreativeMode" value="None"/>
+	<property name="CustomIcon" value="apparelHazmatMask"/>
+	<property name="DisplayType" value="armorHeavy"/>
+	<property name="Material" value="MarmorSteelSet"/>
+	<property name="Weight" value="1"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="DescriptionKey" value="armorEliteHazmatDesc"/>
+	<property name="Group" value="Clothing,Armor,TCArmor"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="100000"/>
+	<property name="TraderStageTemplate" value="armorTier3"/>
+	<property name="UnlockedBy" value="craftingMachineGuns"/>
+	<property name="ShowQuality" value="true"/>
+</item>
+	<item name="armorEliteHazmatMask">
+		<property name="Extends" value="armorEliteHazmatMaster" param1="CustomIcon"/>
+		<property name="Tags" value="head,armor,armorHead,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg,armorHeavySkill"/>
+		<property name="CustomIcon" value="apparelHazmatMask"/>
+		<property name="CustomIconTint" value="255,0,0"/>
+		<property name="EquipSlot" value="Head"/>
+		<effect_group name="ehazmat armor">
+			<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,6" tier="1,2,3,4,5,6"/>
+			<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="16,18" tier="1,6"/>
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="16,18" tier="1,6" tags="heat,electrical"/>
+			<passive_effect name="HypothermalResist" operation="base_add" value="8,11" tier="1,6"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="8,11" tier="1,6"/>
+			<passive_effect name="BuffResistance" operation="base_add" value="0.1,0.2" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,critResistDisplay"/>
+			<passive_effect name="DegradationMax" operation="base_set" value="500,1500" tier="1,6"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
+			<passive_effect name="Mobility" operation="perc_add" value=".05"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value=".045" tags="walking"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+			<display_value name="dStaminaChangeOT" value="-.9"/>
+		</effect_group>
+		<property class="UMA">
+			<property name="Mesh" value="armor_hazmat_head"/>
+			<property name="Overlay0" value="armor_hazmat_hood"/>
+			<property name="Layer" value="middle"/>
+			<property name="UISlot" value="Headgear"/>
+			<property name="Mask1" value="Head" param1="inner"/>
+			<property name="Mask3" value="Face" param1="inner"/>
+			<property name="Mask4" value="Face" param1="middle"/>
+			<property name="Mask5" value="Face" param1="outer"/>
+			<property name="ShowAltHair" value="true"/>
+		</property>
+	</item>
+	<item name="armorEliteHazmatChest">
+		<property name="Extends" value="armorEliteHazmatMaster" param1="CustomIcon"/>
+		<property name="Tags" value="upperbody,chest,armor,armorChest,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg,armorHeavySkill"/>
+		<property name="CustomIcon" value="apparelHazmatJacket"/>
+		<property name="CustomIconTint" value="255,0,0"/>
+		<property name="EquipSlot" value="Chest"/>
+		<effect_group name="ehazmat armor">
+			<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,6" tier="1,2,3,4,5,6"/>
+			<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="16,18" tier="1,6"/>
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="16,18" tier="1,6" tags="heat,electrical"/>
+			<passive_effect name="HypothermalResist" operation="base_add" value="8,11" tier="1,6"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="8,11" tier="1,6"/>
+			<passive_effect name="BuffResistance" operation="base_add" value="0.1,0.2" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,critResistDisplay"/>
+			<passive_effect name="DegradationMax" operation="base_set" value="500,1500" tier="1,6"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
+			<passive_effect name="Mobility" operation="perc_add" value=".05"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+			<display_value name="dStaminaChangeOT" value="-.9"/>
+		</effect_group>
+		<property class="UMA">
+			<property name="Mesh" value="armor_hazmat_chest"/>
+			<property name="Overlay0" value="armor_hazmat_chest"/>
+			<property name="Layer" value="3"/>
+			<property name="Mask0" value="chest" param1="middle"/>
+			<property name="Mask2" value="chest" param1="inner"/>
+			<property name="UISlot" value="ChestArmor"/>
+		</property>
+	</item>
+	<item name="armorEliteHazmatGloves">
+		<property name="Extends" value="armorEliteHazmatMaster" param1="CustomIcon"/>
+		<property name="Tags" value="upperbody,hands,armor,armorHands,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg,armorHeavySkill"/>
+		<property name="CustomIcon" value="apparelHazmatGloves"/>
+		<property name="CustomIconTint" value="255,0,0"/>
+		<property name="EquipSlot" value="Hands"/>
+		<effect_group name="ehazmat armor">
+			<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,6" tier="1,2,3,4,5,6"/>
+			<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="16,18" tier="1,6"/>
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="16,18" tier="1,6" tags="heat,electrical"/>
+			<passive_effect name="HypothermalResist" operation="base_add" value="8,11" tier="1,6"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="8,11" tier="1,6"/>
+			<passive_effect name="BuffResistance" operation="base_add" value="0.1,0.2" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,critResistDisplay"/>
+			<passive_effect name="DegradationMax" operation="base_set" value="500,1500" tier="1,6"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
+			<passive_effect name="Mobility" operation="perc_add" value=".05"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+			<display_value name="dStaminaChangeOT" value="-.9"/>
+		</effect_group>
+		<property class="UMA">
+			<property name="Mesh" value="armor_iron_gloves"/>
+			<property name="Overlay0" value="armor_iron_gloves"/>
+			<property name="Layer" value="0"/>
+			<property name="UISlot" value="Gloves"/>
+		</property>
+	</item>
+	<item name="armorEliteHazmatLegs">
+		<property name="Extends" value="armorEliteHazmatMaster" param1="CustomIcon"/>
+		<property name="Tags" value="lowerbody,legs,armor,armorLegs,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg,armorHeavySkill"/>
+		<property name="CustomIcon" value="apparelHazmatPants"/>
+		<property name="CustomIconTint" value="255,0,0"/>
+		<property name="EquipSlot" value="Legs"/>
+		<effect_group name="ehazmat armor">
+			<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,6" tier="1,2,3,4,5,6"/>
+			<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="16,18" tier="1,6"/>
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="16,18" tier="1,6" tags="heat,electrical"/>
+			<passive_effect name="HypothermalResist" operation="base_add" value="8,11" tier="1,6"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="8,11" tier="1,6"/>
+			<passive_effect name="BuffResistance" operation="base_add" value="0.1,0.2" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,critResistDisplay"/>
+			<passive_effect name="DegradationMax" operation="base_set" value="500,1500" tier="1,6"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
+			<passive_effect name="Mobility" operation="perc_add" value=".01,.02,.03,.04,.05,.06" tier="1,2,3,4,5,6"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+			<display_value name="dStaminaChangeOT" value="-.9"/>
+		</effect_group>
+		<property class="UMA">
+			<property name="Mesh" value="armor_hazmat_legs"/>
+			<property name="Mask0" value="legs" param1="middle"/>
+			<property name="Overlay0" value="armor_hazmat_pants"/>
+			<property name="Layer" value="3"/>
+			<property name="UISlot" value="LegArmor"/>
+		</property>
+	</item>
+	<item name="armorEliteHazmatBoots">
+	<property name="Extends" value="armorEliteHazmatMaster" param1="CustomIcon"/>
+	<property name="Tags" value="lowerbody,feet,armor,armorFeet,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg,armorHeavySkill"/>
+	<property name="CustomIcon" value="apparelHazmatBoots"/>
+	<property name="CustomIconTint" value="255,0,0"/>
+	<property name="EquipSlot" value="Feet"/>
+	<effect_group name="ehazmat armor">
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="16,18" tier="1,6"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="16,18" tier="1,6" tags="heat,electrical"/>
+		<passive_effect name="HypothermalResist" operation="base_add" value="8,11" tier="1,6"/>
+		<passive_effect name="HyperthermalResist" operation="base_add" value="8,11" tier="1,6"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.1,0.2" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,critResistDisplay"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="500,1500" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
+		<passive_effect name="Mobility" operation="perc_add" value=".05"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.9"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_hazmat_feet"/>
+		<property name="Overlay0" value="armor_hazmat_boots"/>
+		<property name="Layer" value="0"/>
+		<property name="UISlot" value="Footwear"/>
+	</property>
+</item>
+<!-- END ELITE HAZMAT PLATE -->
+<!-- ELITE MACHETE -->
+<item name="EliteSteelMachete">
+	<property name="Tags" value="machete,melee,grunting,light,longShaft,perkFlurryOfAgility,weapon,meleeWeapon,attAgility,perkDeepCuts,perkTheHuntsman,canHaveCosmetic,bladeSkill,corpseRemoval"/>
+	<property name="DisplayType" value="meleeKnife"/>
+	<property name="HoldType" value="47"/>
+	<property name="CustomIcon" value="meleeWpnBladeT3Machete"/>
+	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Knives/machetePrefab.prefab"/>
+	<property name="Material" value="MmeleeWpnBladeParts"/>
+	<property name="TintColor" value="107, 107, 71"/>
+	<property name="Weight" value="1"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="EconomicValue" value="700"/>
+	<property name="TraderStageTemplate" value="baseTier2"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="Group" value="Ammo/Weapons,Melee Weapons"/>
+	<property name="RepairExpMultiplier" value="5.5"/>
+	<property name="UnlockedBy" value="craftingBlades"/><!-- meleeWpnBladeT3MacheteSchematic, -->
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Damage_type" value="Slashing"/>
+		<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+		<property name="Sound_start" value="machete_swinglight"/>
+		<property name="ToolCategory.Butcher" value="0" param1="4.7"/>
+			<!-- This triggers the use of the special corpse harvesting animation if there is a matching harvest event.
+			Also, param1  is the damage multiplier for corpse harvesting. -->
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".28"/>
+		<property name="GrazeEnd" value=".4"/>
+		<property name="SwingDegrees" value="80"/>
+		<property name="SwingAngle" value="130"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="metalslashorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+		</property>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Damage_type" value="Slashing"/>
+		<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+		<property name="Sound_start" value="machete_swingheavy"/>
+		<property name="ToolCategory.Butcher" value="0" param1="4.7"/>
+		<property name="UsePowerAttackAnimation" value="true"/>
+		<property name="UseGrazingHits" value="true"/>
+		<property name="IsHorizontalSwing" value="true"/>
+		<property name="GrazeStart" value=".3"/>
+		<property name="GrazeEnd" value=".4"/>
+		<property name="SwingDegrees" value="-80"/>
+		<property name="SwingAngle" value="-60"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="metalslashorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+		</property>
+	</property>
+	<effect_group name="EliteSteelMachete">
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="85" tags="perkDeepCuts,perkFlurryOfAgility"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="4.2" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="4000,5500" tier="1,6" tags="perkDeepCuts"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkDeepCuts"/>
+		<passive_effect name="MaxRange" operation="base_set" value="4" tags="perkDeepCuts"/>
+		<passive_effect name="BlockRange" operation="base_set" value="4" tags="perkDeepCuts"/>
+		<passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="100000" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="235" tags="perkDeepCuts"/> <!-- meleeWpnBladeT3Machete -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDeepCuts"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="base_set" value="1" tags="perkDeepCuts"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="5" tags="elite"/>
+		<passive_effect name="HarvestCount" operation="base_set" value="2.5" tags="butcherHarvest"/>
+		<!--<passive_effect name="BlockDamage" operation="perc_add" value="1.5" tags="blockButcher"/>-->
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="2.5" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="8.7" tags="secondary"/>
+	</effect_group>
+	<effect_group name="sneak damage bonus">
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+			<passive_effect name="DamageBonus" operation="base_add" value="4"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="4" tags="perkDeepCuts"/>
+			<display_value name="dEntityDamageSneak" value="4"/>
+	</effect_group>
+</item>
+<!-- END ELITE MACHETE -->
+<!-- ELITE MILITARY SET -->
+<item name="armorEliteMilitaryMaster">
+	<property name="CreativeMode" value="None"/>
+	<property name="CustomIcon" value="armorMilitaryHelmet"/>
+	<property name="DisplayType" value="armorLight"/>
+	<property name="Material" value="MarmorMilitarySet"/>
+	<property name="Weight" value="1"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	<property name="DescriptionKey" value="armorEliteMilitaryGroupDesc"/>
+	<property name="Group" value="Clothing,Armor,TCArmor"/>
+	<property name="RepairExpMultiplier" value="12.8"/>
+	<property name="EconomicValue" value="500"/>
+	<property name="TraderStageTemplate" value="armorTier3"/>
+	<property name="UnlockedBy" value="craftingMachineGuns"/><!-- armorMilitarySetSchematic, -->
+	<property name="ShowQuality" value="true"/>
+</item>
+	<item name="armorEliteMilitaryGhillieHood">
+		<property name="Extends" value="armorEliteMilitaryMaster" param1="CustomIcon"/>
+		<property name="Tags" value="head,armor,armorHead,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg,armorLightSkill"/>
+		<property name="EquipSlot" value="Head"/>
+		<property name="CustomIcon" value="apparelGhillieSuitHood"/>
+		<effect_group name="military armor">
+			<passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,4,5" tier="1,2,3,4,5,6"/>
+			<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="14,16" tier="1,6"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="-.2,.2"/> 
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="10,12" tier="1,6" tags="heat,electrical"/>
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="-.2,.2"/>
+			<passive_effect name="BuffResistance" operation="base_add" value="0.05,0.061" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,critResistDisplay"/>
+			<passive_effect name="DegradationMax" operation="base_set" value="300,400" tier="1,6"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+			<passive_effect name="Mobility" operation="perc_add" value=".08"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+			<display_value name="dStaminaChangeOT" value="-.56"/>
+			<passive_effect name="NoiseMultiplier" operation="perc_add" value="-.20"/><display_value name="dNoiseMultiplier" value=".1"/>
+		</effect_group>
+		<property class="UMA">
+			<property name="Mesh" value="ghillie_suit_hat"/>
+			<property name="Overlay0" value="ghillie_suit"/>
+			<property name="Overlay0Tint" value="105,110,83"/>
+			<property name="Layer" value="2"/>
+			<property name="UISlot" value="Headgear"/>
+			<property name="Mask0" value="Head" param1="outer"/>
+			<property name="ShowAltHair" value="true"/>
+		</property>
+	</item>
+	<item name="armorEliteMilitaryGhillieSuit">
+		<property name="Extends" value="armorEliteMilitaryMaster" param1="CustomIcon"/>
+		<property name="Tags" value="upperbody,chest,armor,armorChest,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg,armorLightSkill"/>
+		<property name="EquipSlot" value="Chest"/>
+		<property name="CustomIcon" value="apparelGhillieSuitJacket"/>
+		<effect_group name="military armor">
+			<passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,4,5" tier="1,2,3,4,5,6"/>
+			<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="14,16" tier="1,6"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="-.2,.2"/> 
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="14,16" tier="1,6" tags="heat,electrical"/>
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="-.2,.2"/>
+			<passive_effect name="BuffResistance" operation="base_add" value="0.05,0.061" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,critResistDisplay"/>
+			<passive_effect name="DegradationMax" operation="base_set" value="300,400" tier="1,6"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+			<passive_effect name="Mobility" operation="perc_add" value=".08"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+			<display_value name="dStaminaChangeOT" value="-.56"/>
+			<passive_effect name="NoiseMultiplier" operation="perc_add" value="-.20"/><display_value name="dNoiseMultiplier" value=".1"/>
+		</effect_group>
+		<property class="UMA">
+			<property name="Mesh" value="ghillie_suit_shirt"/>
+			<property name="Overlay0" value="ghillie_suit"/>
+			<property name="Overlay0Tint" value="105,110,83"/>
+			<property name="Layer" value="3"/>
+			<property name="UISlot" value="ChestArmor"/>
+			<property name="Mask0" value="hands" param1="outer"/>
+			<property name="Mask1" value="chest" param1="middle"/>
+		</property>
+	</item>
+	<item name="armorEliteMilitaryGloves">
+		<property name="Extends" value="armorEliteMilitaryMaster" param1="CustomIcon"/>
+		<property name="Tags" value="upperbody,hands,armor,armorHands,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg,armorLightSkill"/>
+		<property name="EquipSlot" value="Hands"/>
+		<property name="CustomIcon" value="armorMilitaryGloves"/>
+		<effect_group name="military armor">
+			<passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,4,5" tier="1,2,3,4,5,6"/>
+			<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="14,16" tier="1,6"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="-.2,.2"/> 
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="14,16" tier="1,6" tags="heat,electrical"/>
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="-.2,.2"/>
+			<passive_effect name="BuffResistance" operation="base_add" value="0.05,0.061" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,critResistDisplay"/>
+			<passive_effect name="DegradationMax" operation="base_set" value="300,400" tier="1,6"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+			<passive_effect name="Mobility" operation="perc_add" value=".08"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+			<display_value name="dStaminaChangeOT" value="-.56"/>
+			<passive_effect name="NoiseMultiplier" operation="perc_add" value="-.20"/><display_value name="dNoiseMultiplier" value=".1"/>
+		</effect_group>
+		<property class="UMA">
+			<property name="Mesh" value="armor_kevlar_gloves"/>
+			<property name="Overlay0" value="armor_kevlar_gloves"/>
+			<property name="Layer" value="0"/>
+			<property name="UISlot" value="Gloves"/>
+		</property>
+	</item>
+	<item name="armorEliteMilitaryLegs">
+		<property name="Extends" value="armorEliteMilitaryMaster" param1="CustomIcon"/>
+		<property name="Tags" value="lowerbody,legs,armor,armorLegs,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg,armorLightSkill"/>
+		<property name="EquipSlot" value="Legs"/>
+		<property name="CustomIcon" value="apparelGhillieSuitPants"/>
+		<effect_group name="military armor">
+			<passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,4,5" tier="1,2,3,4,5,6"/>
+			<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="14,16" tier="1,6"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="-.2,.2"/> 
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="14,16" tier="1,6" tags="heat,electrical"/>
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="-.2,.2"/>
+			<passive_effect name="BuffResistance" operation="base_add" value="0.05,0.061" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,critResistDisplay"/>
+			<passive_effect name="DegradationMax" operation="base_set" value="300,400" tier="1,6"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+			<passive_effect name="Mobility" operation="perc_add" value=".08"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+			<display_value name="dStaminaChangeOT" value="-.56"/>
+			<passive_effect name="NoiseMultiplier" operation="perc_add" value="-.20"/><display_value name="dNoiseMultiplier" value=".1"/>
+		</effect_group>
+		<property class="UMA">
+			<property name="Mesh" value="ghillie_suit_pants"/>
+			<property name="Overlay0" value="ghillie_suit"/>
+			<property name="Overlay0Tint" value="105,110,83"/>
+			<property name="Layer" value="1"/>
+			<property name="UISlot" value="Pants"/>
+		</property>
+	</item>
+	<item name="armorEliteMilitaryBoots">
+	<property name="Extends" value="armorEliteMilitaryMaster" param1="CustomIcon"/>
+	<property name="Tags" value="lowerbody,feet,armor,armorFeet,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg,armorLightSkill"/>
+	<property name="EquipSlot" value="Feet"/>
+	<property name="CustomIcon" value="armorMilitaryBoots"/>
+	<effect_group name="military armor">
+		<passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="14,16" tier="1,6"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="-.2,.2"/> 
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="14,16" tier="1,6" tags="heat,electrical"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="-.2,.2"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.05,0.061" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,critResistDisplay"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="300,400" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+		<passive_effect name="Mobility" operation="perc_add" value=".08"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.56"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value="-.20"/><display_value name="dNoiseMultiplier" value=".1"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_boots"/>
+		<property name="Overlay0" value="armor_kevlar_boots"/>
+		<property name="Layer" value="0"/>
+		<property name="UISlot" value="Footwear"/>
+	</property>
+</item>
+<!-- END ELITE MILITARY SET -->
+<!-- ELITE CHAINSAW -->
+<item name="EliteChainsaw">
+	<property name="Tags" value="melee,heavy,tool,motorTool,attStrength,perkMiner69r,perkMotherLode,chainsaw,canHaveCosmetic,harvestingSkill,corpseRemoval"/>
+	<property name="DisplayType" value="motorTool"/>
+	<property name="HoldType" value="19"/>
+	<property name="Meshfile" value="@:Other/Items/Weapons/Melee/Chainsaw/chainsawPrefab.prefab"/>
+	<property name="Material" value="MMotorToolParts"/>
+	<property name="TintColor" value="255, 0, 0"/>
+	<property name="Weight" value="1"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="SoundIdle" value="chainsaw_idle"/>
+	<property name="Group" value="Tools/Traps"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
+	<property name="UnlockedBy" value="craftingMachineGuns"/><!-- meleeToolAxeT3ChainsawSchematic, -->
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="chainsaw_unholster"/>
+	<property name="SoundHolster" value="chainsaw_holster"/>
+	<property name="CustomIcon" value="meleeToolAxeT3Chainsaw"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Hitmask_override" value="Melee"/> <!-- "Class" value="Ranged" is hardcoded to never collide with grass regardless -->
+		<property name="UseMeleeCrosshair" value="true"/>
+		<property name="Single_magazine_usage" value="false"/>
+		<property name="Magazine_items" value="ammoGasCan"/>
+		<property name="bullet_material" value="metal"/>
+		<property name="Reload_time" value="2.1"/>
+		<!-- <property name="Sound_start" value="chainsaw_fire_start"/> -->
+		<property name="Sound_start" value="chainsaw_fire_start"/>
+		<property name="Sound_empty" value="chainsaw_empty"/>
+		<!-- I don't believe these are being used
+		<property name="Sound_repeat" value="Sounds/Weapons/Motorized/Chainsaw/chainsaw_fire_lp"/>
+		<property name="Sound_end" value="Sounds/Weapons/Motorized/Chainsaw/chainsaw_fire_end"/> 
+		-->
+		<property name="Sound_reload" value="chainsaw_reload"/>
+		<property name="AutoReload" value="true"/>
+		<property name="Particles_muzzle_smoke" value="nozzlesmoke_chainsaw"/>
+		<!-- <property name="DamageBonus.wood" value="10"/>
+		<property name="DamageBonus.head" value="5"/> -->
+		<property name="SupportHarvesting" value="true"/>
+		<property name="ToolCategory.harvestingTools" value="1" param1="1"/>
+        <property name="triggerEffectTriggerPullDualsense" value="PistolTrigger"/>
+        <property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+        <property name="triggerEffectTriggerShootDualsense" value="PistolShoot"/>
+        <property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
+	</property>
+
+	<effect_group name="meleeToolAxeT3Chainsaw">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="600" tags="perkMiner69r"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="5000,25000" tier="1,6" tags="perkMiner69r"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
+		<passive_effect name="MaxRange" operation="base_set" value="3.2" tags="perkMiner69r"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkMiner69r"/>
+		<passive_effect name="ModSlots" operation="base_set" value="4,4,4,4,4,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="SphereCastRadius" operation="base_set" value=".1"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="100" tags="perkMiner69r"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkMiner69r"/> <!-- random effective rng -->
+		<passive_effect name="EntityDamage" operation="base_set" value="80" tags="perkMiner69r"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.04,.04" tags="perkMiner69r"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="base_set" value="250" tags="perkMiner69r"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkMiner69r"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
+		<passive_effect name="PlayerExpGain" operation="perc_add" value="-.3" tags="Harvesting"/>
+		<!-- <passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkMiner69r"/> --> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMiner69r"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/>  --><!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkMiner69r"/> <!-- random WeaponHandling -->
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMiner69r"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="300" tags="perkMiner69r"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkMiner69r"/> <!-- 3.5s -->
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value=".5" tags="perkMiner69r"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value=".5" tags="perkMiner69r"/>
+		
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.25" tags="perkMiner69r"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".25" tags="perkMiner69r"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.45" tags="perkMiner69r"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".45" tags="perkMiner69r"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1" tags="perkMiner69r"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="5" tags="perkMiner69r"/>
+	</effect_group>
+</item>
+</append>
+</configs>

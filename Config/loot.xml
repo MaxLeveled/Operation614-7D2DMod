@@ -1,0 +1,36 @@
+<configs>
+<append xpath="/lootcontainers">
+<!-- Knap Sack -->
+<lootcontainer id="998" name="EliteWightLoot" count="4" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1">
+	<item name="resourceEliteCore" count="2" prob="0.65"/>
+	<item name="resourceEliteBladeParts" count="1" prob="0.65"/>
+	<item name="resourceEliteGunParts" count="1" prob="0.65"/>
+	<item name="modEliteKiller" count="1" prob="0.0050"/>
+</lootcontainer>
+<lootcontainer id="998" name="EliteHazmatLoot" count="4" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1">
+	<item name="resourceEliteCore" count="2" prob="0.65"/>
+	<item name="resourceEliteBladeParts" count="1" prob="0.65"/>
+	<item name="resourceEliteGunParts" count="1" prob="0.65"/>
+		<item name="armorEliteHazmatMask" count="1" prob="0.0010"/>
+			<item name="armorEliteHazmatChest" count="1" prob="0.0010"/>
+				<item name="armorEliteHazmatGloves" count="1" prob="0.0010"/>
+					<item name="armorEliteHazmatBoots" count="1" prob="0.0010"/>
+						<item name="armorEliteHazmatLegs" count="1" prob="0.0010"/>
+</lootcontainer>
+<lootcontainer id="998" name="EliteSWATLoot" count="3" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1">
+	<item name="armorMilitarySetParts" count="1" prob="0.65"/>
+	<item name="resourceEliteCore" count="2" prob="0.65"/>
+	<item name="resourceEliteBladeParts" count="1" prob="0.65"/>
+	<item name="modT1GunBuffer" count="1" prob="0.01"/>
+	<item name="modT2GunBuffer" count="1" prob="0.01"/>
+	<item name="modT3GunBuffer" count="1" prob="0.01"/>
+	<item name="modT4GunBuffer" count="1" prob="0.01"/>
+	<item name="apparelNightvisionGoggles" count="1" prob="0.0010"/>
+		<item name="armorEliteMilitaryGhillieHood" count="1" prob="0.0010"/>
+			<item name="armorEliteMilitaryGhillieSuit" count="1" prob="0.0010"/>
+				<item name="armorEliteMilitaryGloves" count="1" prob="0.0010"/>
+					<item name="armorEliteMilitaryLegs" count="1" prob="0.0010"/>
+						<item name="armorEliteMilitaryBoots" count="1" prob="0.0010"/>
+</lootcontainer>
+</append>
+</configs>

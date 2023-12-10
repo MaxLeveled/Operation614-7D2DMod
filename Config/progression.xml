@@ -1,0 +1,19 @@
+<configs>
+ 	<insertAfter xpath="//crafting_skill[@name='craftingMachineGuns']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @tags='gunMGT3M60']">
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="95,100" value="1" tags="armorEliteHazmatMaster,armorEliteHazmatMask,armorEliteHazmatChest,armorEliteHazmatGloves,armorEliteHazmatLegs,armorEliteHazmatBoots,armorEliteMilitaryMaster,armorEliteMilitaryGhillieHood,armorEliteMilitaryGhillieSuit,armorEliteMilitaryGloves,armorEliteMilitaryLegs,armorEliteMilitaryBoots,EliteChainsaw"/>
+	</insertAfter>
+
+	<insertAfter xpath="//crafting_skill[@name='craftingMachineGuns']/effect_group/passive_effect[@name='CraftingTier' and @tags='gunMGT3M60']">	
+			<passive_effect name="CraftingTier" operation="base_add" level="95,96,97,98,99,100" value="1,2,3,4,4,5" tags="armorEliteHazmatMaster,armorEliteHazmatMask,armorEliteHazmatChest,armorEliteHazmatGloves,armorEliteHazmatLegs,armorEliteHazmatBoots,armorEliteMilitaryMaster,armorEliteMilitaryGhillieHood,armorEliteMilitaryGhillieSuit,armorEliteMilitaryGloves,armorEliteMilitaryLegs,armorEliteMilitaryBoots,EliteChainsaw"/>
+	</insertAfter>
+	
+<!-- MACHETE -->
+
+	<insertAfter xpath="//crafting_skill[@name='craftingBlades']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @tags='meleeWpnBladeT3Machete']">
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="55,75" value="1" tags="EliteSteelMachete"/>
+	</insertAfter>
+	
+	<insertAfter xpath="//crafting_skill[@name='craftingBlades']/effect_group/passive_effect[@name='CraftingTier' and @tags='meleeWpnBladeT3Machete']">
+	<passive_effect name="CraftingTier" operation="base_add" level="55,60,65,70,74,75" value="1,2,3,4,4,5" tags="EliteSteelMachete"/>
+	</insertAfter> 
+</configs>	

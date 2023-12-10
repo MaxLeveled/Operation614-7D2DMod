@@ -1,0 +1,31 @@
+<configs>
+<append xpath="/buffs">
+	
+<buff name="zSWAT01" hidden="true">
+			<duration value=".25"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="zSWAT02"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="positionAOE" range="15" buff="zSWAT"/>
+			</effect_group>
+		</buff>
+
+		<buff name="zSWAT02" hidden="true">
+			<duration value=".25"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="zSWAT01"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="positionAOE" range="15" buff="zSWAT"/>
+			</effect_group>
+		</buff>
+
+		<buff name="zSWAT" name_key="buffSWATName" tooltip_key="buffSWATTooltip" icon="server_z_always_run" icon_color="255,255,255" icon_blink="true">
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<update_rate value="1"/>
+			<effect_group>
+				<requirement name="EntityTagCompare" tags="player"/>
+				<passive_effect name="WalkSpeed" operation="base_set" value="-0.10"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="-0.10"/>
+			</effect_group>
+		</buff>
+	</append>
+</configs>
