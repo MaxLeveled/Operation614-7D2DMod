@@ -241,9 +241,9 @@
 </entity_class>
 	</append>
 
-<!-- Non-headshot damage nerfed to 10% -->
+<!-- Non-headshot damage nerfed to 10%, headshots now do an extra 50% -->
 <insertAfter xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='DamageModifier'][@operation='perc_set'][@value='1'][1]">
-	<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="head,animal"/>
+	<passive_effect name="DamageModifier" operation="perc_set" value="1.5" tags="head"/>
 	<passive_effect name="DamageModifier" operation="perc_set" value="0.1" tags="zombie"/>
 	</insertAfter>
 	

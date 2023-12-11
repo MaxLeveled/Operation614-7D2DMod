@@ -17,14 +17,14 @@ armorEliteHazmatChest,items,Clothes,,,Elite Hazmat Plated Hauberk
 armorEliteHazmatGloves,items,Clothes,,,Elite Hazmat Gauntlets
 armorEliteHazmatBoots,items,Clothes,,,Elite Hazmat Sabatons
 armorEliteHazmatDesc,items,Clothes,,,Elite armor that offers the best physical protection available.\nIt will also protect you from the weather!\n\nRepair with Elite Armor Plates.\nScrap to Elite Armor Plates.
-modT1GunBuffer,item_modifiers,mod,,,Ergonomic Accessories
-modT1GunBufferDesc,item_modifiers,mod,,,Increase weapon damage dealt by 25%.\nThis mod cannot stack with other damage boosting accessories.
-modT2GunBuffer,item_modifiers,mod,,,Barrel Rifling
-modT2GunBufferDesc,item_modifiers,mod,,,Increase weapon damage dealt by 50%.\nThis mod cannot stack with other damage boosting accessories.
-modT3GunBuffer,item_modifiers,mod,,,Precision Manufacturing
-modT3GunBufferDesc,item_modifiers,mod,,,Increase weapon damage dealt by 75%.\nThis mod cannot stack with other damage boosting accessories.
-modT4GunBuffer,item_modifiers,mod,,,Pressure+ Ammunition
-modT4GunBufferDesc,item_modifiers,mod,,,Increase weapon damage dealt by 100%.\nThis mod cannot stack with other damage boosting accessories.
+mod614GunBufferT1,item_modifiers,mod,,,Ergonomic Accessories
+mod614GunBufferT1Desc,item_modifiers,mod,,,Increase weapon damage dealt by 25%.\nThis mod cannot stack with other damage boosting accessories.
+mod614GunBufferT2,item_modifiers,mod,,,Barrel Rifling
+mod614GunBufferT2Desc,item_modifiers,mod,,,Increase weapon damage dealt by 50%.\nThis mod cannot stack with other damage boosting accessories.
+mod614GunBufferT3,item_modifiers,mod,,,Precision Manufacturing
+mod614GunBufferT3Desc,item_modifiers,mod,,,Increase weapon damage dealt by 75%.\nThis mod cannot stack with other damage boosting accessories.
+mod614GunBufferT4,item_modifiers,mod,,,Pressure+ Ammunition
+mod614GunBufferT4Desc,item_modifiers,mod,,,Increase weapon damage dealt by 100%.\nThis mod cannot stack with other damage boosting accessories.
 EliteSWAT,entityclasses,Entity,,,Elite SWAT Zombie
 EliteHazmat,entityclasses,Entity,,,Elite Hazmat Zombie
 buffSWATName,buffs,Buff,,,Speeding Ticket

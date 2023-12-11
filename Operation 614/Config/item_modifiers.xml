@@ -1,7 +1,5 @@
 <configs>
 	<append xpath="/item_modifiers">
-	
-	<item_modifiers>
 	<item_modifier name="614modtemplate" type="attachment">
 		<property name="CreativeMode" value="None"/>
 		<property name="CustomIcon" value="missingIcon"/>
