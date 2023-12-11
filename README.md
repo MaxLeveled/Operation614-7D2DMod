@@ -25,8 +25,11 @@ Features:
 	
 - Gameplay:
 	Headshots do 100% damage, all other body shots will only do 10%. I recommend keeping zombie counts high, but no runners; that really adds to the intensity!
+
 	SWAT Zombies have an AOE Slow Debuff that will trigger once they're damaged. It will keep slowing you down until they are killed, they should be secondary targets unless they are hit!
+
 	Removed Cop Zombie Vomit
+
 	Elite Zombies begin spawning above Game Stage 100, and become increasingly frequent the higher you go. The most Elites spawn in the Wastelands and Snow Biomes!
 
 Planned:
