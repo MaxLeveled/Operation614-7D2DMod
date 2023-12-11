@@ -70,7 +70,7 @@
   <!-- XP grunt radiated -->
 
   <effect_group name="Base Effects">
-    <passive_effect name="HealthMax" operation="base_set" value="1300"/>
+    <passive_effect name="HealthMax" operation="base_set" value="1900"/>
     <triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="22.5"/>
     <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
   </effect_group>
@@ -199,7 +199,7 @@
 
 	<effect_group name="Base Effects">
 		<!--<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>-->
-		<passive_effect name="HealthMax" operation="base_set" value="2500"/>
+		<passive_effect name="HealthMax" operation="base_set" value="3500"/>
 		<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
 	</effect_group>
 </entity_class>
@@ -233,18 +233,21 @@
   <property name="LootDropProb" value="1"/>
   <!-- XP grunt radiated -->
   <effect_group name="Base Effects">
-    <passive_effect name="HealthMax" operation="base_set" value="1150"/>
+    <passive_effect name="HealthMax" operation="base_set" value="1550"/>
 	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="zSWAT01"/>
 	<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="head"/>
 	<passive_effect name="PhysicalDamageResist" operation="base_set" value="60"/>
   </effect_group>
 </entity_class>
 	</append>
-	
+
+<!-- Non-headshot damage nerfed to 10% -->
 <insertAfter xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='DamageModifier'][@operation='perc_set'][@value='1'][1]">
 	<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="head,animal"/>
 	<passive_effect name="DamageModifier" operation="perc_set" value="0.1" tags="zombie"/>
 	</insertAfter>
+	
+<!-- Removes vanilla fat cop, adds in an identical replacement but we've removed the Ranged Attack AI Task, so no more vomit -->
 <set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='DamageModifier'][@operation='perc_add'][@value='1'][@tags='head'][1]/@value">1.5</set>
 	<remove xpath="/entity_classes/entity_class[@name='zombieFatCop']"/>
 	<insertAfter xpath="/entity_classes/entity_class[@name='zombieFatHawaiianRadiated']">
